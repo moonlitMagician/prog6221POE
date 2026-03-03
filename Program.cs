@@ -52,7 +52,10 @@ class Program
 
     static void Interaction()
     {
+
         string userInput = Console.ReadLine() ?? "";
+        userInput.ToLower();
+
         if (userInput.Contains("password") && userInput.Contains("security"))
         {
             AsciiArt.TypeEffect(Texts.passwordSec);
@@ -69,10 +72,13 @@ class Program
         {
             AsciiArt.TypeEffect(Texts.helpText);
         }
+        else if (userInput.Contains("how") && userInput.Contains("are") && userInput.Contains("you"))
+        {
+            AsciiArt.TypeEffect(Texts.GetRandomFeeling());
+        }
         else
         {
-            int ranInd = Random.Shared.Next(Texts.confusedStatements.Length);
-            AsciiArt.TypeEffect(Texts.confusedStatements[ranInd]);
+            AsciiArt.TypeEffect(Texts.GetRandomConfused());
         }
     }
 }
