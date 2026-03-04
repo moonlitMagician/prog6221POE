@@ -7,7 +7,7 @@ class Program
     static void Main()
     {
         Greeting();
-        while (0 == 0)
+        while (true)
         {
             Thread.Sleep(1000);
             Console.Clear();
@@ -18,6 +18,13 @@ class Program
     }
 
     static string _name = "";
+
+    static readonly Dictionary<string, Action> _commands = new()
+{
+    { "password security", () => AsciiArt.TypeEffect(Texts.passwordSec) },
+    { "phishing", () => AsciiArt.TypeEffect(Texts.phishingSec) },
+    { "safe browsing", () => AsciiArt.TypeEffect(Texts.safeBrowseSec) }
+};
 
     static string GetName()
     {
@@ -33,6 +40,9 @@ class Program
 
         AsciiArt.DrawEmptyBox(Texts.WelcomeMessage);
         AsciiArt.TypeEffectInBox(Texts.WelcomeMessage);
+
+        AsciiArt.TypeEffect(Texts.introductionMessage);
+        AsciiArt.TypeEffect(Texts.introductionMessage);
 
         AsciiArt.TypeEffect("\nCan I Get your name?");
         _name = Console.ReadLine() ?? "Guest";
@@ -51,34 +61,30 @@ class Program
     }
 
     static void Interaction()
+{
+    string userInput = (Console.ReadLine() ?? "").ToLower();
+
+    foreach (var command in _commands)
     {
-
-        string userInput = Console.ReadLine() ?? "";
-        userInput.ToLower();
-
-        if (userInput.Contains("password") && userInput.Contains("security"))
+        if (userInput.Contains(command.Key))
         {
-            AsciiArt.TypeEffect(Texts.passwordSec);
-        }
-        else if (userInput.Contains("phishing"))
-        {
-            AsciiArt.TypeEffect(Texts.phishingSec);
-        } 
-        else if (userInput.Contains("safe") && userInput.Contains("browsing"))
-        {
-             AsciiArt.TypeEffect(Texts.safeBrowseSec);
-        }
-        else if (userInput.Contains("help") && !userInput.Contains("browsing") && !userInput.Contains("safe") && !userInput.Contains("phishing") && !userInput.Contains("security") && !userInput.Contains("password"))
-        {
-            AsciiArt.TypeEffect(Texts.helpText);
-        }
-        else if (userInput.Contains("how") && userInput.Contains("are") && userInput.Contains("you"))
-        {
-            AsciiArt.TypeEffect(Texts.GetRandomFeeling());
-        }
-        else
-        {
-            AsciiArt.TypeEffect(Texts.GetRandomConfused());
+            command.Value.Invoke();
+            return;
         }
     }
+
+    if (userInput.Contains("help"))
+    {
+        AsciiArt.TypeEffect(Texts.helpText);
+    }
+    else if (userInput.Contains("how are you"))
+    {
+        AsciiArt.DrawEmptyBox(Texts.GetRandomFeeling());
+        AsciiArt.TypeEffectInBox($"{Texts.GetRandomFeeling()}, Thanks for asking {_name}!");
+    }
+    else
+    {
+        AsciiArt.TypeEffect(Texts.GetRandomConfused());
+    }
+}
 }
