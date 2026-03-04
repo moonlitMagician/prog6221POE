@@ -53,5 +53,7 @@ namespace Classwork
         public static string safeBrowseSec = "Safe browsing means using the internet in ways that protect your personal information and devices from threats. Stick to secure websites (look for HTTPS), avoid clicking suspicious links or pop-ups, and keep your browser and antivirus software updated. Practicing caution online helps reduce the risk of malware, scams, and data breaches.";
         public static string helpText = "I can help you with Phishing awareness, Safe browsing habits and password Security!";
 
+        public static string purposeText = "I am your personal assistant to help you with any cybersecurity questions, ask away!";
+
     }
 }

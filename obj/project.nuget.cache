@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "RNUKvGybUP8=",
+  "dgSpecHash": "WeE1AHEufP8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\classwork.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\system.windows.extensions\\10.0.3\\system.windows.extensions.10.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512"
+  ],
   "logs": []
 }

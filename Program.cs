@@ -37,6 +37,7 @@ class Program
         Console.Clear();
 
         Console.ForegroundColor = ConsoleColor.Green;
+        AudioNamespace.Audio.PlayGreeting();
         Console.WriteLine(AsciiArt.CyberSecLogo());
         Console.WriteLine(AsciiArt.idleBot());
 
@@ -88,6 +89,13 @@ class Program
         AsciiArt.DrawEmptyBox(Texts.GetRandomFeeling());
         AsciiArt.TypeEffectInBox($"{Texts.GetRandomFeeling()}, Thanks for asking {_name}!");
     }
+    else if (userInput.Contains("what") && userInput.Contains("purpose"))
+        {
+            Thinking();
+            Console.WriteLine(AsciiArt.answerBot());
+            AsciiArt.DrawEmptyBox(Texts.purposeText);
+            AsciiArt.TypeEffectInBox(Texts.purposeText);
+        }
     else
     {
         Console.WriteLine(AsciiArt.answerBot());

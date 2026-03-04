@@ -42,3 +42,7 @@ C:\Users\lab_services_student\Documents\GitHub\prog6221POE\obj\Debug\net8.0\refi
 C:\Users\lab_services_student\Documents\GitHub\prog6221POE\obj\Debug\net8.0\classwork.pdb
 C:\Users\lab_services_student\Documents\GitHub\prog6221POE\obj\Debug\net8.0\classwork.genruntimeconfig.cache
 C:\Users\lab_services_student\Documents\GitHub\prog6221POE\obj\Debug\net8.0\ref\classwork.dll
+C:\Users\User\Desktop\vorthos\prog6221POE\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\vorthos\prog6221POE\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\User\Desktop\vorthos\prog6221POE\obj\Debug\net8.0\classwork.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\vorthos\prog6221POE\obj\Debug\net8.0\classwork.csproj.Up2Date
