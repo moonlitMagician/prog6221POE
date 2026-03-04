@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Classwork;
 
 class Program
@@ -10,9 +11,9 @@ class Program
         while (true)
         {
             Thread.Sleep(1000);
-            Console.Clear();
-            Console.WriteLine(AsciiArt.CyberSecLogo());
-            Console.WriteLine("\n");
+            initScreen();
+            Console.WriteLine(AsciiArt.idleBot());
+            Console.WriteLine($"{Texts.GetRandomHelp()}, {_name}?");
             Interaction();
         }
     }
@@ -37,12 +38,13 @@ class Program
 
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(AsciiArt.CyberSecLogo());
+        Console.WriteLine(AsciiArt.idleBot());
 
         AsciiArt.DrawEmptyBox(Texts.WelcomeMessage);
         AsciiArt.TypeEffectInBox(Texts.WelcomeMessage);
 
-        AsciiArt.TypeEffect(Texts.introductionMessage);
-        AsciiArt.TypeEffect(Texts.introductionMessage);
+        AsciiArt.DrawEmptyBox(Texts.introductionMessage);
+        AsciiArt.TypeEffectInBox(Texts.introductionMessage);
 
         AsciiArt.TypeEffect("\nCan I Get your name?");
         _name = Console.ReadLine() ?? "Guest";
@@ -56,8 +58,6 @@ class Program
             AsciiArt.TypeEffect("\nMysterious? I like that. I will refer to you as Guest from now on!");
         }
 
-        AsciiArt.TypeEffect($"\nWhat can i help you with today {_name}?");
-
     }
 
     static void Interaction()
@@ -68,6 +68,8 @@ class Program
     {
         if (userInput.Contains(command.Key))
         {
+            Thinking();
+            Console.WriteLine(AsciiArt.answerBot());
             command.Value.Invoke();
             return;
         }
@@ -75,16 +77,48 @@ class Program
 
     if (userInput.Contains("help"))
     {
+        Thinking();
+        Console.WriteLine(AsciiArt.answerBot());
         AsciiArt.TypeEffect(Texts.helpText);
     }
     else if (userInput.Contains("how are you"))
     {
+        Thinking();
+        Console.WriteLine(AsciiArt.answerBot());
         AsciiArt.DrawEmptyBox(Texts.GetRandomFeeling());
         AsciiArt.TypeEffectInBox($"{Texts.GetRandomFeeling()}, Thanks for asking {_name}!");
     }
     else
     {
+        Console.WriteLine(AsciiArt.answerBot());
         AsciiArt.TypeEffect(Texts.GetRandomConfused());
     }
 }
+
+static void Thinking()
+    {
+        Console.Clear();
+        Console.WriteLine(AsciiArt.thinkingBot());
+        Console.WriteLine("\n");
+        Console.Write("Thinking");
+        for (int i = 0; i < 3; i++)
+        {
+            Thread.Sleep(500);
+            Console.Write(".");
+        }
+        Console.WriteLine("");
+        Thread.Sleep(1000);
+        initScreen();
+    }
+
+static void initScreen()
+    {
+        Console.Clear();
+            Console.WriteLine(AsciiArt.CyberSecLogo());
+            AsciiArt.DrawEmptyBox(Texts.WelcomeMessage);
+            AsciiArt.PrintInBox(Texts.WelcomeMessage);
+            AsciiArt.DrawEmptyBox(Texts.introductionMessage);
+            AsciiArt.PrintInBox(Texts.introductionMessage);
+            Console.WriteLine("\n");
+    }
 }

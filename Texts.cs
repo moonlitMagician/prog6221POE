@@ -16,6 +16,19 @@ namespace Classwork
             "Sorry, I didn't catch that. if you're stuck, I am always open to share how i can help you"
         };
 
+        public static string[] helpStatements =
+        {
+          "What can i Help you with today",
+          "Anything you're curious about",
+          "What burning questions do you have",
+          "I'm sure i could answer anything you would like to ask"  
+        };
+
+        public static string GetRandomHelp()
+        {
+            return helpStatements[Random.Shared.Next(helpStatements.Length)];
+        }
+
         public static string GetRandomFeeling()
         {
             return feelingStatements[Random.Shared.Next(feelingStatements.Length)];

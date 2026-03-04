@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj": {}
+    "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\classwork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj": {
+    "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\classwork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj",
+        "projectUniqueName": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\classwork.csproj",
         "projectName": "classwork",
-        "projectPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\obj\\",
+        "projectPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\classwork.csproj",
+        "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lab_services_student\\Documents\\GitHub\\prog6221POE\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lab_services_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,24 +61,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.24, 8.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.24, 8.0.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

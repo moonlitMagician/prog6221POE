@@ -1,10 +1,5 @@
 using System;
 
-class Ascii
-{
-
-}
-
 class AsciiArt
 {
     public static String CyberSecLogo()
@@ -18,6 +13,64 @@ _________        ___.                    _________                          .__ 
  \______  / ____| |___  /\___  >__|    /_______  /\___  >\___  >____/ |__|  |__||__|  / ____|
         \/\/          \/     \/                \/     \/     \/                       \/     ";
 
+
+        return logo;
+    }
+
+    public static String idleBot()
+    {
+        String logo = @"     
+       __
+   _  |@@|
+  / \ \--/ __
+  ) O|----|  |   __
+ / / \ }{ /\ )_ / _\
+ )/  /\__/\ \__O (__
+|/  (--/\--)    \__/
+/   _)(  )(_
+   `---''---`
+";
+
+        return logo;
+    }
+
+    public static String thinkingBot()
+    {
+        String logo = @"
+        
+   __,_,
+  [_|_/ 
+   //
+ _//    __
+(_|)   |@@|
+ \ \__ \--/ __
+  \o__|----|  |   __
+      \ }{ /\ )_ / _\
+      /\__/\ \__O (__
+     (--/\--)    \__/
+     _)(  )(_
+    `---''---`
+
+
+        ";
+
+        return logo;
+    }
+
+    public static String answerBot()
+    {
+        String logo = @"
+         __
+ _(\    |@@|
+(__/\__ \--/ __
+   \___|----|  |   __
+       \ }{ /\ )_ / _\
+       /\__/\ \__O (__
+      (--/\--)    \__/
+      _)(  )(_
+     `---''---`
+
+        ";
 
         return logo;
     }
@@ -55,6 +108,13 @@ _________        ___.                    _________                          .__ 
         
         // Move the cursor back to the bottom so the program doesn't 
         // start typing next lines inside our box
+        Console.SetCursorPosition(0, Console.CursorTop + 2);
+    }
+
+    public static void PrintInBox(String inp)
+    {
+        Console.SetCursorPosition(2, Console.CursorTop - 2);
+        Console.Write(inp);
         Console.SetCursorPosition(0, Console.CursorTop + 2);
     }
 }
