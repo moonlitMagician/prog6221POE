@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj": {}
+    "C:\\Users\\User\\Desktop\\vorthos\\prog6221ML\\prog6221POE\\classwork.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj": {
+    "C:\\Users\\User\\Desktop\\vorthos\\prog6221ML\\prog6221POE\\classwork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\vorthos\\prog6221ML\\prog6221POE\\classwork.csproj",
         "projectName": "classwork",
-        "projectPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\classwork.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221ML\\prog6221POE\\classwork.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221POE\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\vorthos\\prog6221ML\\prog6221POE\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
